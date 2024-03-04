@@ -1,0 +1,18 @@
+@use "src/app/styles/sass" as *;
+
+.groupContainer {
+  @include flex($direction: column);
+  gap: 16px;
+}
+
+.subtitle {
+  @include body2;
+}
+
+.row {
+  @include flex($direction: column);
+  width: max-content;
+  gap: 16px;
+}
+
+

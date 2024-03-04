@@ -1,0 +1,15 @@
+@use "src/app/styles/sass" as *;
+
+.rowContainer {
+  @include flex($direction: row, $justify: space-between);
+  gap: 16px;
+}
+
+.description, .value {
+  @include subtitle3;
+}
+
+.description {
+  color: $text-secondary;
+}
+

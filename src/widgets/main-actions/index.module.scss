@@ -1,0 +1,42 @@
+@use "src/app/styles/sass" as *;
+
+.actions {
+  @include flex($direction: row, $justify: space-between);
+}
+
+.inputs {
+  @include flex($direction: row);
+  gap: 16px;
+}
+
+.input {
+  width: 308px;
+  height: 52px;
+  @include subtitle1;
+  background-color: $bg-secondary;
+  color: $text-secondary;
+  border-radius: 16px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.button {
+  @include body3;
+  width: 125px;
+  height: 40px;
+  background-color: transparent;
+  color: $btn-accent;
+  border-radius: 16px;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  border: 2px solid #0000002e;
+}

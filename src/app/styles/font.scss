@@ -1,0 +1,46 @@
+@mixin base-typography() {
+  font-family: 'Jura', Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+@mixin subtitle1() {
+  @include base-typography;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin subtitle2() {
+  @include base-typography;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin subtitle3() {
+  @include base-typography;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin body1() {
+  @include base-typography;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+@mixin body2() {
+  @include base-typography;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+@mixin body3() {
+  @include base-typography;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}

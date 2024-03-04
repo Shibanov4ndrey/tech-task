@@ -1,0 +1,20 @@
+@use "src/app/styles/sass" as *;
+
+.descriptionContainer {
+  @include flex($direction: row);
+  gap: 16px;
+}
+
+.description {
+  min-width: 57px;
+  @include subtitle3;
+  color: $text-secondary;
+}
+
+.text {
+  @include subtitle2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

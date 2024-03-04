@@ -1,0 +1,14 @@
+@use "src/app/styles/sass" as *;
+
+.content {
+  @include flex($direction: row, $justify: end);
+  gap: 16px;
+  width: 100%;
+}
+
+.cards {
+  width: 100%;
+  @include flex($direction: row, $justify: center, $wrap: wrap);
+  height: fit-content;
+  gap: 16px;
+}

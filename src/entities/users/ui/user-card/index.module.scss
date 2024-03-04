@@ -1,0 +1,84 @@
+@use "src/app/styles/sass" as *;
+
+.cardContainer {
+  position: relative;
+  width: 332px;
+  height: fit-content;
+  @include flex($direction: column);
+  gap: 16px;
+  background-color: $bg-secondary;
+  border: 1px solid $bg-secondary;
+  border-radius: 16px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.cardContainer:hover {
+  border: 1px solid $color-orange;
+}
+
+
+.cardContainer > .deleteButton {
+  display: none;
+}
+
+.cardContainer:hover > .deleteButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  @include flex($direction: row, $justify: center, $align: center);
+  border-width: 0 0 1px 1px;
+  border-style: solid;
+  border-color: $color-red;
+  border-radius: 0 16px 0 16px;
+  cursor: pointer;
+}
+
+.cardContainer:hover > .imgContainer > .nameContainer > .name {
+  color: $color-orange;
+}
+
+.svg {
+  stroke: $color-red;
+  width: 24px;
+  height: 24px;
+}
+
+.imgContainer {
+  @include flex($direction: row);
+  gap: 16px;
+}
+
+.nameContainer {
+  width: calc(100% - 72px);
+  @include flex($direction: column, $justify: center);
+  gap: 8px;
+}
+
+.img {
+  height: 56px;
+  width: 56px;
+  border-radius: 28px;
+  opacity: 0.8;
+}
+
+.name {
+  @include body1;
+}
+
+.email {
+  @include subtitle2;
+  word-wrap: break-word;
+}
+
+.email, .name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+
+

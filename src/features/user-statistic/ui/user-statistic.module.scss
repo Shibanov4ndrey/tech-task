@@ -1,0 +1,24 @@
+@use "src/app/styles/sass" as *;
+
+.statContainer {
+  position: sticky;
+  top: 0;
+  min-width: 332px;
+  height: 100vh;
+  background-color: $bg-secondary;
+  @include flex($direction: column);
+  gap: 24px;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.title {
+  @include body1;
+}
+
+.hr {
+  border: none;
+  background-color: $color-grey;
+  color: $color-grey;
+  height: 1px;
+}
